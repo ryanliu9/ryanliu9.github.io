@@ -1,0 +1,32 @@
+h1 {
+	padding-top: 15%;
+	text-align: center;
+}
+
+body {
+	font-family: "Cinzel";
+	text-shadow: 4px 4px 4px #aaa;
+	background: url("/images/background.jpg") no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover; 
+                background-size: 100% 100%;
+}
+
+#remoteWrapper {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#remoteButtons button {
+	text-align: center;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px #aaa;
+	background: #EEEEEE; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(#EEEEEE, #DDDDDD); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#EEEEEE, #DDDDDD); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#EEEEEE, #DDDDDD); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#EEEEEE, #DDDDDD); /* Standard syntax (must be last) */
+}
+

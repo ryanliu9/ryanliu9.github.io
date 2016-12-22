@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> BEAGLEBONE CONTROLLER </title>
+<link rel="stylesheet" type="text/css" href="site.css.scss">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Cinzel">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+<h1>BeagleBone Black Remote</h1>
+<div id="remoteWrapper">
+<div id="remoteButtons">
+	<button>USR0</button>
+	<button>USR1</button>
+	<button>USR2</button>
+	<button>USR3</button>
+</div>
+</div>
+
+<script type="text/javascript">
+	var btnList = document.getElementsByTagName("button");
+	var buttonMap = new Map();
+	for (LEDnum = 0; LEDnum < btnList.length; LEDnum++) {
+		buttonMap.set(LEDnum, "off");
+		btnList[LEDnum].setAttribute("onclick", "btnClick('" + LEDnum + "')");	
+	}
+	
+	function btnClick(LEDnum) {
+		LEDnum = parseInt(LEDnum);
+		if (buttonMap.get(LEDnum) == "off") {
+			buttonMap.set(LEDnum, "on");
+			window.alert("USR" + LEDnum + " is turned on.");
+		} else if (buttonMap.get(LEDnum) == "on") {
+			buttonMap.set(LEDnum, "off");
+			window.alert("USR" + LEDnum + " is turned off.");
+		} else {
+			window.alert("Error: LED Buttons.");
+		}
+	}
+
+</script>
+</body>
+</html>

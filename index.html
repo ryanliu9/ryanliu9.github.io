@@ -33,7 +33,7 @@
 	
 	function digout(pin,value) {
 		xmlhttp = new XMLHttpRequest();
-		xmlhttp.open("GET","http://192.168.1.114:8888/output?pin="+pin+"&value="+value, false);
+		xmlhttp.open("POST","http://192.168.1.114:8888/output?pin="+pin+"&value="+value, false);
 		xmlhttp.onreadystatechange=function(){
 			if (xmlhttp.readyState==4 && xmlhttp.status==200){
 				string=xmlhttp.responseText;
